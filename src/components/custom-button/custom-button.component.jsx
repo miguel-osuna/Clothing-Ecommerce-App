@@ -10,9 +10,15 @@ const propTypes = {
   otherProps: PropTypes.object,
 };
 
-const CustomButton = ({ children, isGoogleSignIn, ...otherProps }) => {
+const CustomButton = ({
+  children,
+  isGoogleSignIn,
+  inverted,
+  ...otherProps
+}) => {
   let btnClass = classNames({
     "custom-button": true,
+    'inverted-color': inverted,
     "google-sign-in": isGoogleSignIn,
   });
 
