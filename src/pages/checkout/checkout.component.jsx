@@ -35,7 +35,6 @@ const CheckoutPage = ({ cartItems, cartTotal }) => (
     <div className="total">
       <span>${cartTotal}</span>
     </div>
-    <CustomButton />
   </div>
 );
 

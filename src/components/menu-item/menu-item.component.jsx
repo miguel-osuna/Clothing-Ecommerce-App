@@ -13,14 +13,17 @@ const propTypes = {
   linkUrl: PropTypes.string,
 };
 
-const MenuItem = ({ title, imageUrl, size, history, linkUrl }) => {
+const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => {
   let menuItemClass = classNames({
     "menu-item": true,
     [`${size}`]: true,
   });
 
   return (
-    <div className={menuItemClass} onClick={() => history.push(`${linkUrl}`)}>
+    <div
+      className={menuItemClass}
+      onClick={() => history.push(`${match.url}${linkUrl}`)}
+    >
       <div
         className="background-image"
         style={{
