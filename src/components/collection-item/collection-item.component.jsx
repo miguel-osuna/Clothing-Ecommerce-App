@@ -12,13 +12,7 @@ import {
 } from "./collection-item.styles";
 import { addItem } from "../../redux/cart/cart.actions";
 
-const propTypes = {
-  name: PropTypes.string,
-  price: PropTypes.number,
-  imageUrl: PropTypes.string,
-};
-
-const CollectionItem = ({ item, addItem }) => {
+export const CollectionItem = ({ item, addItem }) => {
   const { name, price, imageUrl } = item;
 
   return (
@@ -34,8 +28,6 @@ const CollectionItem = ({ item, addItem }) => {
     </CollectionItemContainer>
   );
 };
-
-CollectionItem.propTypes = propTypes;
 
 const mapDispatchToProps = (dispatch) => ({
   addItem: (item) => dispatch(addItem(item)),

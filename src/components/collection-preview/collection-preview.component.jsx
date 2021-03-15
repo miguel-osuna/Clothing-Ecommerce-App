@@ -1,4 +1,5 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 
 import CollectionItem from "../collection-item/collection-item.component";
@@ -13,7 +14,13 @@ const propTypes = {
   items: PropTypes.array,
 };
 
-const CollectionPreview = ({ title, items, history, match, routeName }) => (
+export const CollectionPreview = ({
+  title,
+  items,
+  history,
+  match,
+  routeName,
+}) => (
   <CollectionPreviewContainer>
     <TitleContainer onClick={() => history.push(`${match.path}/${routeName}`)}>
       {title.toUpperCase()}
@@ -29,4 +36,4 @@ const CollectionPreview = ({ title, items, history, match, routeName }) => (
 );
 CollectionPreview.propTypes = propTypes;
 
-export default CollectionPreview;
+export default withRouter(CollectionPreview);

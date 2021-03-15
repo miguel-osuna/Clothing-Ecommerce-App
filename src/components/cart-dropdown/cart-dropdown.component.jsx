@@ -13,7 +13,7 @@ import {
 import { selectCartItems } from "../../redux/cart/cart.selectors";
 import { toggleCartDropdown } from "../../redux/cart/cart.actions";
 
-const CartDropdown = ({ cartItems, history, dispatch }) => (
+export const CartDropdown = ({ cartItems, history, dispatch }) => (
   <CartDropdownContainer>
     <CartItemsContainer>
       {cartItems.length ? (

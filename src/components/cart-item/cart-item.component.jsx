@@ -6,7 +6,7 @@ import {
   ItemDetailsContainer,
 } from "./cart-item.styles";
 
-const CartItem = ({ item: { name, price, imageUrl, quantity } }) => (
+export const CartItem = ({ item: { name, price, imageUrl, quantity } }) => (
   <CartItemContainer>
     <CartItemImage src={imageUrl} alt="item" />
     <ItemDetailsContainer>

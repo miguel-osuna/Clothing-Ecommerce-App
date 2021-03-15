@@ -10,7 +10,7 @@ import {
 import { toggleCartDropdown } from "../../redux/cart/cart.actions";
 import { selectCartItemsCount } from "../../redux/cart/cart.selectors";
 
-const CartIcon = ({ toggleCartDropdown, itemCount }) => (
+export const CartIcon = ({ toggleCartDropdown, itemCount }) => (
   <CartContainer onClick={toggleCartDropdown}>
     <ShoppingIcon />
     <ItemCountContainer>{itemCount}</ItemCountContainer>
