@@ -10,7 +10,7 @@ import {
 } from "./collection.styles";
 import { selectCollection } from "../../redux/shop/shop.selectors";
 
-const CollectionPage = ({ collection }) => {
+export const CollectionPage = ({ collection }) => {
   const { title, items } = collection;
   return (
     <CollectionPageContainer>
